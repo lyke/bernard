@@ -1,58 +1,66 @@
 {
-    "name": "bernard/bernard",
-    "description": "Message queue abstraction layer",
-    "license": "MIT",
-    "keywords": ["message queue", "message", "queue", "bernard"],
-    "homepage": "https://github.com/bernardphp/bernard",
-    "type": "library",
-    "require": {
-        "php": ">=7.4",
-        "beberlei/assert": "^2.1 || ^3.0",
-        "symfony/event-dispatcher": "^3.0 || ^4.0"
-    },
-    "require-dev" : {
-        "doctrine/dbal": "^2.5",
-        "doctrine/instantiator": "^1.0.5",
-        "friends-of-phpspec/phpspec-code-coverage": "^6.0",
-        "phpspec/phpspec": "^7.0",
-        "phpunit/phpunit": "^9.5",
-        "psr/container": "^1.0",
-        "psr/log": "^1.0",
-        "symfony/console": "^3.0 || ^4.0"
-    },
-    "suggest": {
-        "doctrine/dbal": "Allow sending messages to simulated message queue in a database via doctrine dbal",
-        "mongodb/mongodb": "Allow sending messages to a MongoDB server via PHP Driver"
-    },
-    "autoload" : {
-        "psr-4" : { "Bernard\\" : "src/" }
-    },
-    "autoload-dev" : {
-        "psr-4" : {
-            "Bernard\\Tests\\" : "tests/",
-            "spec\\Bernard\\" : "spec/"
-        }
-    },
-    "config": {
-        "sort-packages": true
-    },
-    "scripts": {
-        "clean": "rm -rf build/ vendor/",
-        "test": [
-            "vendor/bin/phpspec run",
-            "vendor/bin/phpunit -v"
-        ],
-        "test-coverage": [
-            "vendor/bin/phpspec run -c phpspec.ci.yml",
-            "vendor/bin/phpunit -v --coverage-text --coverage-clover=build/unit_coverage.xml"
-        ],
-        "test-functional": "php vendor/bin/phpunit -v --group functional"
-    },
-    "extra" : {
-        "branch-alias" : {
-            "dev-master" : "2.0.x-dev"
-        }
-    },
-    "prefer-stable": true,
-    "minimum-stability": "dev"
+  "name": "bernard/bernard",
+  "description": "Message queue abstraction layer",
+  "license": "MIT",
+  "keywords": [
+    "message queue",
+    "message",
+    "queue",
+    "bernard"
+  ],
+  "homepage": "https://github.com/bernardphp/bernard",
+  "type": "library",
+  "require": {
+    "php": ">=7.4",
+    "beberlei/assert": "^2.1 || ^3.0",
+    "symfony/event-dispatcher": "^3.0 || ^4.0",
+    "symfony/serializer": "^2.3 || ^3.0 || ^4.0"
+  },
+  "require-dev": {
+    "doctrine/dbal": "^2.5",
+    "doctrine/instantiator": "^1.0.5",
+    "friends-of-phpspec/phpspec-code-coverage": "^6.0",
+    "phpspec/phpspec": "^7.0",
+    "phpunit/phpunit": "^9.5",
+    "psr/container": "^1.0",
+    "psr/log": "^1.0",
+    "symfony/console": "^3.0 || ^4.0"
+  },
+  "suggest": {
+    "doctrine/dbal": "Allow sending messages to simulated message queue in a database via doctrine dbal",
+    "mongodb/mongodb": "Allow sending messages to a MongoDB server via PHP Driver"
+  },
+  "autoload": {
+    "psr-4": {
+      "Bernard\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Bernard\\Tests\\": "tests/",
+      "spec\\Bernard\\": "spec/"
+    }
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "scripts": {
+    "clean": "rm -rf build/ vendor/",
+    "test": [
+      "vendor/bin/phpspec run",
+      "vendor/bin/phpunit -v"
+    ],
+    "test-coverage": [
+      "vendor/bin/phpspec run -c phpspec.ci.yml",
+      "vendor/bin/phpunit -v --coverage-text --coverage-clover=build/unit_coverage.xml"
+    ],
+    "test-functional": "php vendor/bin/phpunit -v --group functional"
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "2.0.x-dev"
+    }
+  },
+  "prefer-stable": true,
+  "minimum-stability": "dev"
 }
