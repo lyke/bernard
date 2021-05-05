@@ -5,7 +5,7 @@ namespace spec\Bernard;
 use Bernard\Envelope;
 use Bernard\Message;
 use Bernard\Message\PlainMessage;
-use Normalt\Normalizer\AggregateNormalizer;
+use Bernard\Normalizer\AggregateNormalizer;
 
 class SerializerSpec extends \PhpSpec\ObjectBehavior
 {

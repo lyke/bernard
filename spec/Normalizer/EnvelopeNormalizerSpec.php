@@ -5,7 +5,7 @@ namespace spec\Bernard\Normalizer;
 use Bernard\Envelope;
 use Bernard\Message;
 use Bernard\Normalizer\EnvelopeNormalizer;
-use Normalt\Normalizer\AggregateNormalizer;
+use Bernard\Normalizer\AggregateNormalizer;
 use PhpSpec\ObjectBehavior;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;

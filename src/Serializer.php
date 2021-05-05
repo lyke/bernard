@@ -2,7 +2,7 @@
 
 namespace Bernard;
 
-use Normalt\Normalizer\AggregateNormalizer;
+use Bernard\Normalizer\AggregateNormalizer;
 
 class Serializer
 {
